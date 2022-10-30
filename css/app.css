@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+}
+
+body > header {
+    flex: 0 0 auto;
+}
+body > main {
+    flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+main.auth {
+    display: flex;
+}
+
+main.auth>.container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container {
+    display: flow-root;
+    box-sizing: content-box;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ul {
+    list-style: none;
+}
+
+nav li {
+    float: right;
+}
+
+nav a {
+    padding: 10px;
+    margin-left: 10px;
+    line-height: 50px;
+    background-color: #804eff;
+    color: #fff;
+}
+
+input, button, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error > p {
+    background-color: #ff5959;
+    color: #fff;
+    padding: 5px;
+}
+
+.error > p + p {
+    border-top: 1px solid #fff;
+}
+
+ul.tree {
+    overflow-x: auto;
+    padding: 10px 0 40px;
+}
+
+ul.tree ul {
+    padding-left: 40px;
+}
+ul.tree li + li {
+    margin-top: 10px;
+}
+
+li[data-id] {
+    width: 200px;
+    min-height: 40px;
+    background-color: #ccc;
+    position: relative;
+    box-sizing: border-box;
+}
+li[data-id]>div {
+    overflow: hidden;
+}
+li[data-id]>.id {
+    position: absolute;
+    right: 5px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    bottom: 5px;
+    z-index: 1;
+}
+
+ul.all li[data-id] {
+    min-height: 80px;
+}
+
+li[data-id] .controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+li[data-id] .controls>a {
+    float: left;
+}
+
+li[data-id] .out-controls {
+    position: absolute;
+    background-color: #ccc;
+    right: -40px;
+    width: 40px;
+}
+
+li[data-id] .controls>a,
+li[data-id] .out-controls>a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+li[data-id] a {
+    display: block;
+}
+
+a.button {
+    padding: 0 15px;
+    display: inline-block;
+    line-height: 40px;
+}
+
+li[data-id] a,
+a.button {
+    background-color: #ccc;
+    transition: background-color .3s;
+}
+
+li[data-id] h2 {
+    font-size: 20px;
+    padding: 10px;
+    line-height: 20px;
+    min-height: 20px;
+}
+
+li[data-id] p {
+    padding: 0 10px 20px 10px;
+}
+
+ul.all li[data-id] h2 {
+    margin-right: 70px;
+}
+
+li[data-id] a:hover,
+a.button:hover {
+    color: #fff;
+    background-color: #804eff;
+}
+
+li[data-id] .toggle {
+    font-size: 40px;
+}
+
+li[data-id] .toggle:before {
+    display: block;
+    content: "↴";
+}
+
+li[data-id] .toggle.expand:before {
+    transform: rotate(90deg) scaleX(-1);
+}
+
+.fixed {
+    background-color: rgba(0,0,0, .2);
+    position: fixed;
+    display: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.fixed>form,
+.fixed>div {
+    margin: auto;
+    padding: 10px;
+}
+
+.fixed>div {
+    max-width: 200px;
+    background-color: #fff;
+    border: 1px solid;
+}
+
+.fixed>form>fieldset {
+    background-color: #fff;
+    padding: 20px;
+}
