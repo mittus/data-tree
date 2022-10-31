@@ -19,11 +19,12 @@ require_once('functions.php');
                     <li>
                         <?=$ob_data->getUrl()?>
                     </li>
+                    <?=$ob_data->getUserLogin()?>
                 </ul>
             </nav>
         </div>
     </header>
-    <main role="main" class="<?=$ob_data->page?>">
+    <main role="main" class="<?=$ob_data->page?> <?=$ob_data->authorized()?>">
         <div class="container">
             <?=$ob_data->content?>
         </div>

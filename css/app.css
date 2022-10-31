@@ -48,10 +48,13 @@ nav li {
     float: right;
 }
 
-nav a {
+nav a,
+nav span {
     padding: 10px;
     margin-left: 10px;
     line-height: 50px;
+}
+nav a {
     background-color: #804eff;
     color: #fff;
 }
@@ -105,7 +108,7 @@ li[data-id]>.id {
     z-index: 1;
 }
 
-ul.all li[data-id] {
+.admin ul.tree li[data-id] {
     min-height: 80px;
 }
 
@@ -161,7 +164,7 @@ li[data-id] p {
     padding: 0 10px 20px 10px;
 }
 
-ul.all li[data-id] h2 {
+.admin ul.tree li[data-id] h2 {
     margin-right: 70px;
 }
 
