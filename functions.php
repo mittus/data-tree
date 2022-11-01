@@ -161,7 +161,9 @@ class Data {
             $this->page = 'tree';
         }
         if(isset($_POST['save'])) {
-            $this->sendForm();
+            if(!empty($this->authorized)) {
+                $this->sendForm();
+            }
         }
         $file = $_SERVER['DOCUMENT_ROOT'].'/view/'.$this->page.'.php';
         if(file_exists($file)) {
